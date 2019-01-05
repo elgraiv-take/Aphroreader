@@ -59,8 +59,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BaseWindowViewModel.cs" />
+    <Compile Include="DelegateCommand.cs" />
     <Compile Include="Main\MainWindowViewModel.cs" />
     <Compile Include="Util\ButtonUtil.cs" />
+    <Compile Include="Util\DataTemplateUtil.cs" />
+    <Compile Include="Util\WindowUtil.cs" />
+    <Compile Include="ViewModelBase.cs" />
     <Page Include="BaseWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

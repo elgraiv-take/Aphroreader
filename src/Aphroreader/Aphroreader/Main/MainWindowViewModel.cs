@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Elgraiv.Aphroreader.Main
 {
+    [Util.DataTemplateTarget(typeof(MainWindowView))]
     class MainWindowViewModel
     {
     }

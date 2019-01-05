@@ -5,11 +5,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Elgraiv.Aphroreader"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:util="clr-namespace:Elgraiv.Aphroreader.Util"
     Name="Window"
     Title="Aphororeader"
     Width="800"
     Height="450"
+    util:WindowUtil.IsCloseRequested="{Binding Path=IsCloseRequested}"
     Style="{DynamicResource AphWindow}"
+    WindowState="{Binding Path=WindowState}"
     mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
@@ -24,12 +27,14 @@
         <Button
             Width="24"
             HorizontalAlignment="Right"
+            Command="{Binding Path=CloseCommand}"
             Content="r"
             Style="{DynamicResource SystemButton}" />
         <Button
             Width="24"
             Margin="0,0,24,0"
             HorizontalAlignment="Right"
+            Command="{Binding Path=MaximizeCommand}"
             Content="1">
             <Button.Style>
                 <Style BasedOn="{StaticResource SystemButton}" TargetType="{x:Type Button}">
@@ -45,6 +50,7 @@
             Width="24"
             Margin="0,0,24,0"
             HorizontalAlignment="Right"
+            Command="{Binding Path=RestoreCommand}"
             Content="2">
             <Button.Style>
                 <Style BasedOn="{StaticResource SystemButton}" TargetType="{x:Type Button}">
@@ -60,6 +66,7 @@
             Width="24"
             Margin="0,0,48,0"
             HorizontalAlignment="Right"
+            Command="{Binding Path=MinimizeCommand}"
             Content="0"
             Style="{DynamicResource SystemButton}" />
     </Grid>

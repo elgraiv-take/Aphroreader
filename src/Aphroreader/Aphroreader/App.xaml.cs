@@ -29,17 +29,9 @@ namespace Elgraiv.Aphroreader
 
         private void InitializeDataTemplate()
         {
-            AddDataTemplate(typeof(Main.MainWindowViewModel), typeof(Main.MainWindowView));
+            Util.DataTemplateUtil.RegisterDataTemplate(Resources, ResourceAssembly);
         }
 
-        private void AddDataTemplate(Type viewModelType,Type viewType)
-        {
-            Resources.Add(
-                new DataTemplateKey(viewModelType),
-                new DataTemplate(viewModelType) {
-                    VisualTree = new FrameworkElementFactory(viewType)
-                }
-                );
-        }
+        
     }
 }

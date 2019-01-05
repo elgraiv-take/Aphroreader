@@ -11,13 +11,13 @@
     mc:Ignorable="d">
 
     <Grid>
+        <!--
         <ListBox Margin="10">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel />
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
-        </ListBox>
-
+        </ListBox>        -->
     </Grid>
 </UserControl>
