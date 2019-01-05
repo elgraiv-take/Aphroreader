@@ -63,6 +63,10 @@
     </ApplicationDefinition>
     <Compile Include="BaseWindowViewModel.cs" />
     <Compile Include="DelegateCommand.cs" />
+    <Compile Include="Main\ContentThumbnailView.xaml.cs">
+      <DependentUpon>ContentThumbnailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Main\ContentThumbnailViewModel.cs" />
     <Compile Include="Main\ExpanderWidthConverter.cs" />
     <Compile Include="Main\MainWindowViewModel.cs" />
     <Compile Include="Util\ButtonUtil.cs" />
@@ -81,6 +85,10 @@
       <DependentUpon>BaseWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Main\ContentThumbnailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Main\MainWindowView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -102,6 +110,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Theme\Controls\AphListBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\Controls\AphScrollBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

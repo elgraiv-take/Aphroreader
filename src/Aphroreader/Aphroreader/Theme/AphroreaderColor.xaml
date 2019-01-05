@@ -3,10 +3,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:Elgraiv.Aphroreader.Theme">
 
-    <Color x:Key="AphWindowColor">#FF484952</Color>
-    <Color x:Key="AphBackgroundColor">#FF1E1C20</Color>
-    <Color x:Key="AphBackgroundLightColor">#FF484952</Color>
-    <Color x:Key="AphBorderColor">#FF7D7789</Color>
+    <Color x:Key="AphWindowColor">#FF484D52</Color>
+    <Color x:Key="AphBackgroundColor">#FF1C1D20</Color>
+    <Color x:Key="AphBackgroundLightColor">#FF484D52</Color>
+    <Color x:Key="AphBorderColor">#FF777989</Color>
     <Color x:Key="AphForegroundColor">#FFD3D5E1</Color>
     <Color x:Key="AphForcucedBorderColor">#FF5278FF</Color>
     <Color x:Key="AphDisabledForegroundColor">#FF990000</Color>
