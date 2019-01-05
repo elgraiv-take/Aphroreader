@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,10 +19,7 @@ namespace Elgraiv.Aphroreader.Main
             _contents = new ObservableCollection<ContentThumbnailViewModel>();
             Contents = new ReadOnlyObservableCollection<ContentThumbnailViewModel>(_contents);
 
-            for(var i = 0; i < 10; i++)
-            {
-                _contents.Add(new ContentThumbnailViewModel());
-            }
+
         }
     }
 }

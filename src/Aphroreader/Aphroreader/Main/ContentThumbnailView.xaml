@@ -5,8 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Elgraiv.Aphroreader.Main"
              mc:Ignorable="d" Height="200" Width="200">
-    <Grid Background="#FFBF4C4C">
-        <Image/>
+    <Grid Background="Transparent" ToolTip="{Binding Path=Title}">
+        <Image Source="{Binding Path=ThumbnailPath}"/>
 
     </Grid>
 </UserControl>

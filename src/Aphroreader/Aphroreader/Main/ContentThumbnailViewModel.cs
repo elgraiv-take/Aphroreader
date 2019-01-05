@@ -7,7 +7,19 @@ using System.Threading.Tasks;
 namespace Elgraiv.Aphroreader.Main
 {
     [Util.DataTemplateTarget(typeof(ContentThumbnailView))]
-    class ContentThumbnailViewModel
+    class ContentThumbnailViewModel:ViewModelBase
     {
+        private string _thumbnailPath;
+        public string ThumbnailPath
+        {
+            get => _thumbnailPath;
+            set => SetProperty(ref _thumbnailPath, value);
+        }
+        private string _title;
+        public string Title
+        {
+            get => _title;
+            set => SetProperty(ref _title, value);
+        }
     }
 }
