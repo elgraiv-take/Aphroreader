@@ -1,0 +1,19 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Elgraiv.Aphroreader.Theme">
+
+    <Color x:Key="AphWindowColor">#FF494852</Color>
+    <Color x:Key="AphBackgroundColor">#FF1E1C20</Color>
+    <Color x:Key="AphBorderColor">#FF7D7789</Color>
+    <Color x:Key="AphForegroundColor">#FFD6D3E1</Color>
+    <Color x:Key="AphForcucedBorderColor">#FF6400FF</Color>
+    <Color x:Key="AphDisabledForegroundColor">#FF990000</Color>
+
+
+    <SolidColorBrush x:Key="AphWindowColorBrush" Color="{DynamicResource AphWindowColor}" />
+    <SolidColorBrush x:Key="AphBackgroundBrush" Color="{DynamicResource AphBackgroundColor}" />
+    <SolidColorBrush x:Key="AphBorderBrush" Color="{DynamicResource AphBorderColor}" />
+    <SolidColorBrush x:Key="AphForegroundBrush" Color="{DynamicResource AphForegroundColor}" />
+    <SolidColorBrush x:Key="AphForcucedBorderBrush" Color="{DynamicResource AphForcucedBorderColor}" />
+</ResourceDictionary>
