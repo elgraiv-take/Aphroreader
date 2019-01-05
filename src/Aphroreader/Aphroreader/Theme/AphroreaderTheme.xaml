@@ -5,5 +5,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Controls/AphWindow.xaml" />
         <ResourceDictionary Source="Controls/AphButton.xaml" />
+        <ResourceDictionary Source="Controls/AphExpander.xaml" />
+        <ResourceDictionary Source="Controls/AphListBox.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

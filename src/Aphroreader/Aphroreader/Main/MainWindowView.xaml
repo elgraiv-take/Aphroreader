@@ -9,15 +9,28 @@
     d:DesignWidth="800"
     Background="{DynamicResource AphBackgroundBrush}"
     mc:Ignorable="d">
-
+    <UserControl.Resources>
+        <local:ExpanderWidthConverter x:Key="ExpanderWidthConverter" />
+    </UserControl.Resources>
     <Grid>
-        <!--
-        <ListBox Margin="10">
+        <ListBox Margin="10,10,4,10">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel />
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
-        </ListBox>        -->
+        </ListBox>
+        <Expander
+            Name="ToolBox"
+            Grid.Column="1"
+            Margin="0,10,4,10"
+            ExpandDirection="Right"
+            Header="">
+            <StackPanel />
+        </Expander>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="{Binding ElementName=ToolBox, Path=IsExpanded, Converter={StaticResource ExpanderWidthConverter}}" />
+        </Grid.ColumnDefinitions>
     </Grid>
 </UserControl>
