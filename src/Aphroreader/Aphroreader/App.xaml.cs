@@ -30,10 +30,13 @@ namespace Elgraiv.Aphroreader
 
         private void Start()
         {
+
+            var mainModel = new Model.MainModel();
+            mainModel.LoadProject(Aphroreader.Properties.Settings.Default.DefaultProjectPath);
             var mainWindow = new BaseWindow();
             mainWindow.DataContext = new BaseWindowViewModel()
             {
-                Content = new Main.MainWindowViewModel(new Model.MainModel()),
+                Content = new Main.MainWindowViewModel(mainModel),
                 Title = "Aphroreader"
             };
             MainWindow = mainWindow;

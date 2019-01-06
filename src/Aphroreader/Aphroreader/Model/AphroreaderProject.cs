@@ -12,18 +12,16 @@ namespace Elgraiv.Aphroreader.Model
     public class AphroreaderProject : BindableBase
     {
         [JsonProperty("contents")]
-        private ObservableCollection<AphContent> _contents;
-        public ReadOnlyObservableCollection<AphContent> Contents { get; }
+        public ObservableCollection<AphContent> Contents { get; }
 
         public AphroreaderProject()
         {
-            _contents = new ObservableCollection<AphContent>();
-            Contents = new ReadOnlyObservableCollection<AphContent>(_contents);
+            Contents = new ObservableCollection<AphContent>();
         }
 
         public void AddContent(AphContent newContent)
         {
-            _contents.Add(newContent);
+            Contents.Add(newContent);
         }
     }
 }

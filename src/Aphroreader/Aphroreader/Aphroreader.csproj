@@ -79,8 +79,13 @@
     <Compile Include="Util\ButtonUtil.cs" />
     <Compile Include="Util\DataTemplateUtil.cs" />
     <Compile Include="Util\FileDropBehavior.cs" />
+    <Compile Include="Util\PageFeedBehavior.cs" />
     <Compile Include="Util\WindowUtil.cs" />
     <Compile Include="BindableBase.cs" />
+    <Compile Include="Viewer\ContentViewerView.xaml.cs">
+      <DependentUpon>ContentViewerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\ContentViewerViewModel.cs" />
     <Page Include="BaseWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -126,6 +131,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Theme\Controls\AphWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Viewer\ContentViewerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
