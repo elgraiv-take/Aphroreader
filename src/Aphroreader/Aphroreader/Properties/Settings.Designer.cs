@@ -22,5 +22,17 @@ namespace Elgraiv.Aphroreader.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DefaultProjectPath {
+            get {
+                return ((string)(this["DefaultProjectPath"]));
+            }
+            set {
+                this["DefaultProjectPath"] = value;
+            }
+        }
     }
 }

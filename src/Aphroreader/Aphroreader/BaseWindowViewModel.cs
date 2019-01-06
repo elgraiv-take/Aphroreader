@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace Elgraiv.Aphroreader
 {
-    class BaseWindowViewModel:ViewModelBase
+    class BaseWindowViewModel:BindableBase
     {
         public ICommand CloseCommand { get; }
         public ICommand MaximizeCommand { get; }
@@ -20,6 +20,12 @@ namespace Elgraiv.Aphroreader
         {
             get => _content;
             set => SetProperty(ref _content, value);
+        }
+        private object _title;
+        public object Title
+        {
+            get => _title;
+            set => SetProperty(ref _title, value);
         }
 
         private WindowState _windowState=WindowState.Normal;

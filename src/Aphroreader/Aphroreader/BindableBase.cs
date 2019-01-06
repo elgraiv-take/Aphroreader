@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Elgraiv.Aphroreader
 {
-    class ViewModelBase : INotifyPropertyChanged
+    public abstract class BindableBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
