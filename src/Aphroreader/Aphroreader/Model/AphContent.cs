@@ -38,6 +38,9 @@ namespace Elgraiv.Aphroreader.Model
         private Collection<string> _imageList;
         public ReadOnlyCollection<string> ImageList { get; }
 
+        public Func<AphContent, string> TitleFunc { get; set; }
+        public Func<AphContent, string> ThumbnailFunc { get; set; }
+
         public AphContent()
         {
             _imageList = new Collection<string>();
@@ -55,6 +58,23 @@ namespace Elgraiv.Aphroreader.Model
         public void NotifyImageListUpdated()
         {
             RaisePropertyChanged(nameof(ImageList));
+        }
+
+        public void ChangeTitle()
+        {
+            var title=TitleFunc?.Invoke(this);
+            if (title != null)
+            {
+                Title = title;
+            }
+        }
+        public void ChangeThumbnail()
+        {
+            var thumbnail = ThumbnailFunc?.Invoke(this);
+            if (thumbnail != null)
+            {
+                ThumbnailPath = thumbnail;
+            }
         }
     }
 }

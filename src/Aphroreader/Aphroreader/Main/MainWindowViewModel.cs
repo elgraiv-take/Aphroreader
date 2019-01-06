@@ -45,6 +45,11 @@ namespace Elgraiv.Aphroreader.Main
         {
             _model.Project.PropertyChanged += Project_PropertyChanged;
             _model.Project.Contents.CollectionChanged += Contents_CollectionChanged;
+            _contents.Clear();
+            foreach(var content in _model.Project.Contents)
+            {
+                _contents.Add(new ContentThumbnailViewModel(content));
+            }
         }
 
         private void Contents_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)

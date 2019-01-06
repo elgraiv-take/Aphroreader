@@ -12,7 +12,13 @@
         <Grid.InputBindings>
             <MouseBinding Command="{Binding OpenViewerCommand}" MouseAction="LeftDoubleClick" />
         </Grid.InputBindings>
-        <Image Source="{Binding Path=ThumbnailPath}" />
-
+        <Image Source="{Binding Path=ThumbnailPath}" >
+            <Image.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="サムネイルを変更"/>
+                    <MenuItem Header="タイトルを編集"/>
+                </ContextMenu>
+            </Image.ContextMenu>
+        </Image>
     </Grid>
 </UserControl>

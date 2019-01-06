@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -49,11 +50,18 @@ namespace Elgraiv.Aphroreader.Model
         {
             if (File.Exists(path))
             {
-                Project = new AphroreaderProject();
+                using(var reader =new StreamReader(path))
+                {
+                    Project = JsonConvert.DeserializeObject<AphroreaderProject>(reader.ReadToEnd());
+                    Project.FilePath = path;
+                }
             }
             else
             {
-                Project = new AphroreaderProject();
+                Project = new AphroreaderProject()
+                {
+                    FilePath = path,
+                };
             }
         }
     }
