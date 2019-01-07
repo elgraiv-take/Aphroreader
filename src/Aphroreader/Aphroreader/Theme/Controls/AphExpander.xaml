@@ -13,25 +13,27 @@
             Background="#00000000"
             BorderThickness="0">
             <Grid>
-                <fa:ImageAwesome
+                <TextBlock
                     x:Name="CollapsedArrow"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Icon="AngleDoubleLeft">
-                    <fa:ImageAwesome.Foreground>
+                    Text="3"
+                    FontFamily="Marlett">
+                    <TextBlock.Foreground>
                         <SolidColorBrush Color="{DynamicResource AphForegroundColor}" />
-                    </fa:ImageAwesome.Foreground>
-                </fa:ImageAwesome>
-                <fa:ImageAwesome
+                    </TextBlock.Foreground>
+                </TextBlock>
+                <TextBlock
                     Name="ExpandededArrow"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Icon="AngleDoubleRight"
+                    FontFamily="Marlett"
+                    Text="4"
                     Visibility="Collapsed">
-                    <fa:ImageAwesome.Foreground>
+                    <TextBlock.Foreground>
                         <SolidColorBrush Color="{DynamicResource AphForegroundColor}" />
-                    </fa:ImageAwesome.Foreground>
-                </fa:ImageAwesome>
+                    </TextBlock.Foreground>
+                </TextBlock>
             </Grid>
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup x:Name="CommonStates">
