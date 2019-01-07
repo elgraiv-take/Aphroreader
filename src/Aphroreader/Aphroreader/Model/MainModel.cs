@@ -54,6 +54,7 @@ namespace Elgraiv.Aphroreader.Model
                 {
                     Project = JsonConvert.DeserializeObject<AphroreaderProject>(reader.ReadToEnd());
                     Project.FilePath = path;
+                    Project.OnLoaded();
                 }
             }
             else

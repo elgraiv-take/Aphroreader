@@ -15,8 +15,8 @@
         <Image Source="{Binding Path=ThumbnailPath}" >
             <Image.ContextMenu>
                 <ContextMenu>
-                    <MenuItem Header="サムネイルを変更"/>
-                    <MenuItem Header="タイトルを編集"/>
+                    <MenuItem Header="サムネイルを変更" Command="{Binding Path=ChooseThumbnailCommand}"/>
+                    <MenuItem Header="タイトルを編集" Command="{Binding Path=EditTitleCommand}"/>
                 </ContextMenu>
             </Image.ContextMenu>
         </Image>

@@ -22,9 +22,23 @@ namespace Elgraiv.Aphroreader.Model
             Contents = new ObservableCollection<AphContent>();
         }
 
+        public void OnLoaded()
+        {
+            foreach(var content in Contents)
+            {
+                content.PropertyChanged += NewContent_PropertyChanged;
+            }
+        }
+
         public void AddContent(AphContent newContent)
         {
+            newContent.PropertyChanged += NewContent_PropertyChanged;
             Contents.Add(newContent);
+            Save();
+        }
+
+        private void NewContent_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
             Save();
         }
 

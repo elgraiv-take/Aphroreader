@@ -69,14 +69,12 @@
             Command="{Binding Path=MinimizeCommand}"
             Content="0"
             Style="{DynamicResource SystemButton}" />
-        <Menu
+        <TextBlock
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
             Margin="24,0,77,0"
             Background="Transparent"
-            Foreground="{DynamicResource AphForegroundBrush}">
-            <MenuItem
-                Height="24"
-                Header="{Binding Title}"
-                WindowChrome.IsHitTestVisibleInChrome="True" />
-        </Menu>
+            Foreground="{DynamicResource AphForegroundBrush}"
+            Text="{Binding Path=Title}" />
     </Grid>
 </Window>

@@ -35,7 +35,7 @@ namespace Elgraiv.Aphroreader
         {
             _action = action;
         }
-
+        
         public bool CanExecute(object parameter)
         {
             return _isEnabled;

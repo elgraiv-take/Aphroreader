@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace Elgraiv.Aphroreader
 {
-    class BaseWindowViewModel:BindableBase
+    public class BaseWindowViewModel:BindableBase
     {
         public ICommand CloseCommand { get; }
         public ICommand MaximizeCommand { get; }

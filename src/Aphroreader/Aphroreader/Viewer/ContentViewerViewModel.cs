@@ -31,13 +31,17 @@ namespace Elgraiv.Aphroreader.Viewer
         public ICommand BackCommand { get; }
 
         private AphContent _model;
+        private BaseWindowViewModel _baseWindow;
 
-        public ContentViewerViewModel(AphContent content)
+        public ContentViewerViewModel(AphContent content,BaseWindowViewModel baseWindow)
         {
+            _baseWindow = baseWindow;
             _model = content;
             Count = content.ImageList.Count;
             CurrentImage =content.ImageList[0];
             Index = 0;
+
+            UpdateHeader();
 
             NextCommand = new DelegateCommand(PageNext);
             BackCommand = new DelegateCommand(PageBack);
@@ -49,6 +53,7 @@ namespace Elgraiv.Aphroreader.Viewer
             {
                 Index++;
                 CurrentImage = _model.ImageList[Index];
+                UpdateHeader();
             }
         }
         private void PageBack()
@@ -57,8 +62,13 @@ namespace Elgraiv.Aphroreader.Viewer
             {
                 Index--;
                 CurrentImage = _model.ImageList[Index];
+                UpdateHeader();
             }
-        } 
+        }
+        private void UpdateHeader()
+        {
+            _baseWindow.Title = $"{_model.Title} ({Index + 1}/{Count})";
+        }
         
     }
 }
