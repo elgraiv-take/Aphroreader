@@ -79,7 +79,6 @@ namespace Elgraiv.Aphroreader.Main
 
         private void Project_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            throw new NotImplementedException();
         }
 
         private void FileDropped(object args)

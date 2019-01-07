@@ -46,7 +46,7 @@ namespace Elgraiv.Aphroreader.Model
         {
             using (var writer = new StreamWriter(FilePath))
             {
-                writer.Write(JsonConvert.SerializeObject(this));
+                writer.Write(JsonConvert.SerializeObject(this,Formatting.Indented));
             }
         }
     }
