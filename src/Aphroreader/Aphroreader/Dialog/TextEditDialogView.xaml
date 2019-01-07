@@ -1,0 +1,33 @@
+﻿<UserControl
+    x:Class="Elgraiv.Aphroreader.Dialog.TextEditDialogView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:local="clr-namespace:Elgraiv.Aphroreader.Dialog"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="261.349"
+    Height="125.268"
+    mc:Ignorable="d" Background="{DynamicResource AphBackgroundBrush}">
+    <Grid>
+
+        <ComboBox Name="TitleCandidateBox"
+            Margin="10,38,10,0"
+            VerticalAlignment="Top"
+            ItemsSource="{Binding TitleCandidate}" SelectedItem="{Binding SelectedCandidate}">
+        </ComboBox>
+        <TextBox
+            Height="23"
+            Margin="10,10,10,0"
+            VerticalAlignment="Top"
+            Text="{Binding Title}"
+            TextWrapping="Wrap" />
+        <Button
+            Width="75"
+            Margin="176,91,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="OK" Command="{Binding OkCommand}" IsDefault="True"/>
+
+    </Grid>
+</UserControl>

@@ -1,4 +1,5 @@
-﻿using Elgraiv.Aphroreader.Model;
+﻿using Elgraiv.Aphroreader.Dialog;
+using Elgraiv.Aphroreader.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -42,7 +43,16 @@ namespace Elgraiv.Aphroreader.Main
 
         private void EditTitle()
         {
-            
+            var viewModel = new TitleEditDialogViewModel(Title, _model.DirectoryPath);
+            var dialog = new DialogWindow()
+            {
+                DataContext = viewModel
+            };
+            var result=dialog.ShowDialog();
+            if (result == true)
+            {
+                Title = viewModel.Title;
+            }
         }
 
         private void ChooseThumbnail()

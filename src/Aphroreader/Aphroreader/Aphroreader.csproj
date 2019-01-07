@@ -64,6 +64,12 @@
     </ApplicationDefinition>
     <Compile Include="BaseWindowViewModel.cs" />
     <Compile Include="DelegateCommand.cs" />
+    <Compile Include="Dialog\DialogWindow.xaml.cs">
+      <DependentUpon>DialogWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\TextEditDialogView.xaml.cs">
+      <DependentUpon>TextEditDialogView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dialog\TitleEditDialogViewModel.cs" />
     <Compile Include="Main\ContentThumbnailView.xaml.cs">
       <DependentUpon>ContentThumbnailView.xaml</DependentUpon>
@@ -96,6 +102,14 @@
       <DependentUpon>BaseWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Dialog\DialogWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialog\TextEditDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Main\ContentThumbnailView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
